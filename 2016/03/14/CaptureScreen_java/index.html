@@ -122,7 +122,7 @@
                 
                 <div id="nav-container">
                     <div class="post-navbar" style="line-height: 63px;display:none">
-                        <li id="navbar-title"><a href="#">undefined</a></li>
+                        <li id="navbar-title"><a href="#"></a></li>
                         <li id="navbar-toc" style="border-left: none">
                             <a style="padding-right: 15px">
                                 <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
@@ -141,118 +141,81 @@
 
 
 <!-- -->
-<!--<body class="home-template">-->
+<!--<body class="post-template">-->
 <!---->
   
+
 <main class="content" role="main">
+    <article class="post" >
+    <span class="post-meta">
+                  <div class="tag-tile">
+                      
+                  </div>
+                <h1 class="post-title" style="margin: 14px 0;color:#50585D"></h1>
 
-    
-    <article class="post">
+                    <div class="post-meta">
+                        Post on<span class="fa fa-clock-o"></span>
+                        <time datetime="2016-03-14T02:09:03.964Z"
+                              itemprop="datePublished">2016-03-14</time>
+                    </div>
+    </span>
 
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/03/14/CaptureScreen_java/"></a>
-            </h1>
+        <section class="post-content">
+            <hr>
+<h2 id="title-java截屏"><a href="#title-java截屏" class="headerlink" title="title:java截屏"></a>title:java截屏</h2><p>##技术点<br><a href="http://www.apihome.cn/api/java/Toolkit.html" target="_blank" rel="external">Toolkit</a></p>
+<blockquote>
+<p>所有 Abstract Window Toolkit(AWT) 实际实现的抽象超类。Toolkit 的子类被用于将各种组件绑定到特定本机工具包实现。</p>
+<ul>
+<li>getDefaultToolkit() 获取默认工具包。</li>
+<li>getScreenSize() 获取屏幕的大小。</li>
+</ul>
+</blockquote>
+<p><a href="http://download.oracle.com/technetwork/java/javase/6/docs/zh/api/java/util/zip/ZipOutputStream.html" target="_blank" rel="external">ZipOutputStream</a></p>
+<blockquote>
+<p>以 ZIP 文件格式写入文件实现输出流过滤器。包括对已压缩和未压缩条目的支持。<a href="http://blog.csdn.net/z69183787/article/details/8290811" target="_blank" rel="external">Java 使用ZipOutputStream 进行打包操作</a>     </p>
+<p>######压缩<br>dos = new DataOutputStream(outputStream);<br>zip = new ZipOutputStream(dos);<br>zip.putNextEntry(new ZipEntry(System.currentTimeMillis()+””));    </p>
+<p>######解压<br>dis = new DataInputStream(inputStream);<br>zip = new ZipInputStream(dis);<br>zip.getNextEntry();// 得到zip文件流的开始处</p>
+</blockquote>
+<p><a href="http://www.apihome.cn/api/java/Robot.html" target="_blank" rel="external">Robot</a></p>
+<blockquote>
+<p>创建包含从屏幕中读取的像素的图像。<br>createScreenCapture(Rectangle screenRect)      </p>
+<p>控制鼠标和键盘的应用程序生成本机系统输入事件<br>mouseMove(int x, int y)<br>将鼠标指针移动到给定屏幕坐标。<br>mousePress(int buttons)<br>按下一个或多个鼠标按钮。<br>mouseRelease(int buttons)<br>释放一个或多个鼠标按钮。</p>
+<p>#######<a href="http://jingyan.baidu.com/article/ae97a646a91badbbfd461d2d.html" target="_blank" rel="external">自动控制鼠标</a></p>
+</blockquote>
+<p><a href="http://www.apihome.cn/api/java/BufferedImage.html" target="_blank" rel="external">BufferedImage</a></p>
+<blockquote>
+<p>Image是一个抽象列，BufferedImage是Image的实现。<br>Image和BufferedImage的主要作用就是将一副图片加载到内存中。<br>Java将一副图片加载到内存中的方法是：</p>
+<p>Java代码<br>String imgPath = “C://demo.jpg”;<br>BufferedImage image = ImageIO.read(new FileInputStream(imgPath));  </p>
+<p>该方法可以获得图片的详细信息，例如：获得图片的宽度：image.getWidth(null);<br>图片只有加载内存中才能对图片进行进一步的处理。</p>
+</blockquote>
+<p><a href="http://www.apihome.cn/api/java/ImageIO.html" target="_blank" rel="external">ImageIO</a></p>
+<blockquote>
+<p>包含一些用来查找 ImageReader 和 ImageWriter 以及执行简单编码和解码的静态便捷方法。<br>ImageIO.write(bufferedImage, “jpg”, zipOutputStream);    </p>
+<p><a href="http://blog.csdn.net/oh_mourinho/article/details/7979003" target="_blank" rel="external">Java imageIO处理图像</a></p>
+<p><a href="http://zhidao.baidu.com/link?url=fh-Oa9e6F5bNfbvl3Hd9Vrv9nAI3uTky_ry_-dK-7v7pbAokGHXemqIkBlmUJX9-E2ggtuga4jWp1xDbvyxC__" target="_blank" rel="external">eclipse 不能引用 javax.imageio.ImageIO</a></p>
+</blockquote>
+<p>##截屏<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">toolkit = Toolkit.getDefaultToolkit();        </span><br><span class="line">screenSize = toolkit.getScreenSize();            </span><br><span class="line">rectangle = new Rectangle(screenSize);            </span><br><span class="line">robot = new Robot();</span><br><span class="line">BufferedImage bufferedImage = robot.createScreenCapture(rectangle);</span><br><span class="line">zip.putNextEntry(new ZipEntry(System.currentTimeMillis()+&quot;&quot;));</span><br><span class="line">ImageIO.write(bufferedImage, &quot;jpg&quot;, zip);//写到输出流</span><br><span class="line">ImageIO.write(bufferedImage, &quot;jpg&quot;, file);//写到文件</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dis = new DataInputStream(inputStream);</span><br><span class="line">zip = new ZipInputStream(dis);</span><br><span class="line">zip.getNextEntry();// 得到zip文件流的开始处</span><br><span class="line">Bitmap decodeStream = BitmapFactory.decodeStream(zip);</span><br></pre></td></tr></table></figure>
 
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-03-14T02:09:03.964Z"
-                      itemprop="datePublished">2016-03-14</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                
-title:java截屏##技术点Toolkit
-
-所有 Abstract Window Toolkit(AWT) 实际实现的抽象超类。Toolkit 的子类被用于将各种组件绑定到特定本机工具包实现。
-
-getDefaultToolkit() 获取默认工具包。
-getScreenSize() 获取屏幕的大小。
-
-
-ZipOutputStream
-
-以 ZIP 文件格式写入文件实现输出流过滤器。包括对已压缩和未压缩条目的支持。Java 
-                
-            </p>
-            
         </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/03/10/New Document/">Markdown 编辑阅读器</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-03-10T09:17:48.185Z"
-                      itemprop="datePublished">2016-03-10</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                欢迎使用 Cmd Markdown 编辑阅读器
-我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，Cmd Markdown 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。 您可以使用 Cmd Markdown：
-
-
-整理知识，学习笔记
-发布日记，杂文，所见所想
-撰写发布技术文稿（代码支持）
-撰写发布学术论文（LaTeX 公式支持）
-
-
-
-除了您现在看到的这个 Cmd Markdo
-                
-            </p>
+        <hr/>
+        <nav class="pagination" style="width:auto" role="pagination">
             
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/03/10/hello-world/">Hello World</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-03-10T05:49:45.689Z"
-                      itemprop="datePublished">2016-03-10</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new p
-                
-            </p>
+            <a style="cursor:default" class="newer-posts" href="#">This is the First Post</a>
             
+            <a class="share-button" data-original-title title>Share this Post</a>
+            
+            <a data-pjax class="older-posts" href="/2016/03/10/New Document/">Next Post →</a>
+            
+        </nav>
+        <br/>
+        <br/>
+        <section id="comment">
+            <div id="comment-box"></div>
         </section>
+
+
     </article>
-    
-    <nav class="pagination" role="pagination">
-        
-        <span class="page-number">Page 1 of 1</span>
-        
-    </nav>
 </main>
 
 
