@@ -4,14 +4,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Java截屏 | wind</title>
+  <title>Java截屏 | Wind Blog</title>
   <meta name="description" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="/css/component.css" />
   <link rel="stylesheet" type="text/css" href="/css/screen.css" />
-  <meta name="generator" content="wind">
+  <meta name="generator" content="Wind Blog">
   <script src="http://static.duoshuo.com/embed.js"></script>
   
   
@@ -112,7 +112,7 @@
                 <li  style="border-left: 1px solid #c6d0da;">
                     <a id="trigger" href="#"><i class="fa fa-bars"></i></a>
                 </li>
-                <li ><a id="nexus-back" data-pjax href="/">wind</a></li>
+                <li ><a id="nexus-back" data-pjax href="/">Wind Blog</a></li>
                 
                 <div id="nav-container">
                     <div class="post-navbar" style="line-height: 63px;display:none">
@@ -166,9 +166,9 @@
 <p><a href="http://download.oracle.com/technetwork/java/javase/6/docs/zh/api/java/util/zip/ZipOutputStream.html" target="_blank" rel="external">ZipOutputStream</a></p>
 <blockquote>
 <p>以 ZIP 文件格式写入文件实现输出流过滤器。包括对已压缩和未压缩条目的支持。       <a href="http://blog.csdn.net/z69183787/article/details/8290811" target="_blank" rel="external">Java 使用ZipOutputStream 进行打包操作</a>     </p>
-<h6 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dos = new DataOutputStream(outputStream);     </span><br><span class="line">zip = new ZipOutputStream(dos);   </span><br><span class="line">zip.putNextEntry(new ZipEntry(System.currentTimeMillis()+&quot;&quot;));</span><br></pre></td></tr></table></figure>
+<h6 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dos = new DataOutputStream(outputStream); </span><br><span class="line">zip = new ZipOutputStream(dos);</span><br><span class="line">zip.putNextEntry(new ZipEntry(System.currentTimeMillis()+&quot;&quot;));</span><br></pre></td></tr></table></figure>
 </blockquote>
-<h6 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dis = new DataInputStream(inputStream);   </span><br><span class="line">zip = new ZipInputStream(dis);   </span><br><span class="line">zip.getNextEntry();// 得到zip文件流的开始处</span><br></pre></td></tr></table></figure>
+<h6 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dis = new DataInputStream(inputStream);</span><br><span class="line">zip = new ZipInputStream(dis);</span><br><span class="line">zip.getNextEntry();// 得到zip文件流的开始处</span><br></pre></td></tr></table></figure>
 <p><a href="http://www.apihome.cn/api/java/Robot.html" target="_blank" rel="external">Robot</a></p>
 <blockquote>
 <p>创建包含从屏幕中读取的像素的图像。<br>createScreenCapture(Rectangle screenRect)      </p>
@@ -180,7 +180,7 @@
 <p><a href="http://www.apihome.cn/api/java/BufferedImage.html" target="_blank" rel="external">BufferedImage</a></p>
 <blockquote>
 <p>Image是一个抽象列，BufferedImage是Image的实现。<br>Image和BufferedImage的主要作用就是将一副图片加载到内存中。<br>Java将一副图片加载到内存中的方法是：</p>
-<p>Java代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String imgPath = &quot;C://demo.jpg&quot;;     </span><br><span class="line">BufferedImage image = ImageIO.read(new FileInputStream(imgPath));</span><br></pre></td></tr></table></figure></p>
+<p>Java代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String imgPath = &quot;C://demo.jpg&quot;;</span><br><span class="line">BufferedImage image = ImageIO.read(new FileInputStream(imgPath));</span><br></pre></td></tr></table></figure></p>
 <p>该方法可以获得图片的详细信息，例如：获得图片的宽度：image.getWidth(null);<br>图片只有加载内存中才能对图片进行进一步的处理。</p>
 </blockquote>
 <p><a href="http://www.apihome.cn/api/java/ImageIO.html" target="_blank" rel="external">ImageIO</a></p>
@@ -189,7 +189,7 @@
 <p><a href="http://blog.csdn.net/oh_mourinho/article/details/7979003" target="_blank" rel="external">Java imageIO处理图像</a></p>
 <p><a href="http://zhidao.baidu.com/link?url=fh-Oa9e6F5bNfbvl3Hd9Vrv9nAI3uTky_ry_-dK-7v7pbAokGHXemqIkBlmUJX9-E2ggtuga4jWp1xDbvyxC__" target="_blank" rel="external">eclipse 不能引用 javax.imageio.ImageIO</a></p>
 </blockquote>
-<h2 id="截屏"><a href="#截屏" class="headerlink" title="截屏"></a>截屏</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">toolkit = Toolkit.getDefaultToolkit();        </span><br><span class="line">screenSize = toolkit.getScreenSize();            </span><br><span class="line">rectangle = new Rectangle(screenSize);            </span><br><span class="line">robot = new Robot();</span><br><span class="line">BufferedImage bufferedImage = robot.createScreenCapture(rectangle);</span><br><span class="line">zip.putNextEntry(new ZipEntry(System.currentTimeMillis()+&quot;&quot;));</span><br><span class="line">ImageIO.write(bufferedImage, &quot;jpg&quot;, zip);//写到输出流</span><br><span class="line">ImageIO.write(bufferedImage, &quot;jpg&quot;, file);//写到文件</span><br></pre></td></tr></table></figure>
+<h2 id="截屏"><a href="#截屏" class="headerlink" title="截屏"></a>截屏</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">toolkit = Toolkit.getDefaultToolkit();</span><br><span class="line">screenSize = toolkit.getScreenSize();</span><br><span class="line">rectangle = new Rectangle(screenSize);</span><br><span class="line">robot = new Robot();</span><br><span class="line">BufferedImage bufferedImage = robot.createScreenCapture(rectangle);</span><br><span class="line">zip.putNextEntry(new ZipEntry(System.currentTimeMillis()+&quot;&quot;));</span><br><span class="line">ImageIO.write(bufferedImage, &quot;jpg&quot;, zip);//写到输出流</span><br><span class="line">ImageIO.write(bufferedImage, &quot;jpg&quot;, file);//写到文件</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dis = new DataInputStream(inputStream);</span><br><span class="line">zip = new ZipInputStream(dis);</span><br><span class="line">zip.getNextEntry();// 得到zip文件流的开始处</span><br><span class="line">Bitmap decodeStream = BitmapFactory.decodeStream(zip);</span><br></pre></td></tr></table></figure>
 
         </section>
@@ -218,7 +218,7 @@
 <footer class="site-footer">
     
     <div class="inner">
-        <section class="copyright"><a href="/"></a> &copy; wind 2014</section>
+        <section class="copyright"><a href="/"></a> &copy; Wind Blog 2014</section>
         <section class="poweredby">Published with <a target="_blank" href="http://hexo.io/">Hexo   </a> and Theme by <a target="_blank" href="https://github.com/yuche/hexo-theme-kael">Kael</a></section>
     </div>
 </footer>
