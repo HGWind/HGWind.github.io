@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>MVP模式  android | Wind Blog</title>
+  <title>Git命令 | Wind Blog</title>
   <meta name="description" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -128,7 +128,7 @@
                 
                 <div id="nav-container">
                     <div class="post-navbar" style="line-height: 63px;display:none">
-                        <li id="navbar-title"><a href="#">MVP模式  android</a></li>
+                        <li id="navbar-title"><a href="#">Git命令</a></li>
                         <li id="navbar-toc" style="border-left: none">
                             <a style="padding-right: 15px">
                                 <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
@@ -157,33 +157,74 @@
                   <div class="tag-tile">
                       
                   </div>
-                <h1 class="post-title" style="margin: 14px 0;color:#50585D">MVP模式  android</h1>
+                <h1 class="post-title" style="margin: 14px 0;color:#50585D">Git命令</h1>
 
                     <div class="post-meta">
                         Post on<span class="fa fa-clock-o"></span>
-                        <time datetime="2016-03-17T03:10:25.518Z"
-                              itemprop="datePublished">2016-03-17</time>
+                        <time datetime="2016-03-14T07:22:57.963Z"
+                              itemprop="datePublished">2016-03-14</time>
                     </div>
     </span>
 
         <section class="post-content">
-            <p><a href="http://toutiao.com/a6227595415006527746/" target="_blank" rel="external">细说Android的MVP模式</a>  </p>
-<p><a href="http://www.jianshu.com/p/7567ed0d1853" target="_blank" rel="external">【译】Android开发中的MVP架构</a>  </p>
-<p><a href="http://wuxiaolong.me/2015/09/23/AndroidMVPSample/" target="_blank" rel="external">Android MVP 实例</a></p>
-<p><a href="http://gold.xitu.io/entry/5686b3c160b2c297d028a4ea" target="_blank" rel="external">Android的MVP设计模式</a></p>
-<p><a href="http://www.v2ex.com/t/212695#reply5" target="_blank" rel="external">Android MVP 实战——MVP 在 Android 中的简单应用</a></p>
-<p><a href="http://rocko.xyz/2015/02/06/Android%E4%B8%AD%E7%9A%84MVP/" target="_blank" rel="external">Android中的MVP</a></p>
-<h3 id="RxJava"><a href="#RxJava" class="headerlink" title="RxJava"></a>RxJava</h3><p><a href="http://gank.io/post/560e15be2dca930e00da1083" target="_blank" rel="external">给 Android 开发者的 RxJava 详解</a></p>
-
+            <p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a></p>
+<h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><p>用git log命令查看历史记录<br><code>$ git log</code><br><code>$ git log --pretty=oneline</code>  </p>
+<p>上一个版本<br><code>$ git reset --hard HEAD^</code>  </p>
+<p>往上100个版本<br><code>$ git reset --hard HEAD~100</code>    </p>
+<p>用<code>git reflog</code>查看命令历史  </p>
+<p>回到未来的某个版本<br><code>$ git reset --hard 3628164</code></p>
+<h4 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h4><p>登陆<code>GitHub</code>，然后，在右上角找到<code>Create a new repo</code>按钮，创建一个新的仓库<br>在本地的learngit仓库下运行命令：<br><code>$ git remote add origin git@github.com:michaelliao/learngit.git</code><br>使用命令<code>git push -u origin master</code>第一次推送master分支<br>使用命令<code>git push origin master</code>推送最新修改</p>
+<h4 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h4><p><font color="#f00"><code>git clone</code></font> 克隆一个本地库：  </p>
+<p><code>$ git clone git@github.com:michaelliao/gitskills.git</code></p>
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><p>###创建与合并分支</p>
+<p>查看分支：<code>git branch</code></p>
+<p>创建分支：<code>git branch &lt;name&gt;</code></p>
+<p>切换分支：<code>git checkout &lt;name&gt;</code><br><code>$ git checkout master</code></p>
+<p>创建+切换分支：<code>git checkout -b &lt;name&gt;</code><br><code>$ git checkout -b dev</code></p>
+<p>合并某分支到当前分支：<code>git merge &lt;name&gt;</code><br><code>$ git merge dev</code></p>
+<p>删除分支：<code>git branch -d &lt;name&gt;</code></p>
+<h4 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h4><p><code>$ git merge feature1</code><br>必须手动解决冲突后再提交。git status也可以告诉我们冲突的文件  </p>
+<p>用带参数的git log也可以看到分支的合并情况：</p>
+<p><code>$ git log --graph --pretty=oneline --abbrev-commit</code></p>
+<h4 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h4><p>合并dev分支，请注意<code>--no-ff</code>参数，表示禁用Fast forward：</p>
+<p><code>$ git merge --no-ff -m &quot;merge with no-ff&quot; dev</code></p>
+<h4 id="Bug分支"><a href="#Bug分支" class="headerlink" title="Bug分支"></a>Bug分支</h4><p><code>$ git stash</code>功能，可以把当前工作现场“储藏”起来<br>工作现场存到哪去了？用<code>git stash lis</code>t命令看  </p>
+<p>一是用<code>git stash apply</code>恢复，但是恢复后，<code>stas</code>h内容并不删除，你需要用<code>git stash drop</code>来删除；</p>
+<p>另一种方式是用<code>git stash pop</code>，恢复的同时把<code>stash</code>内容也删了  </p>
+<p>可以多次<code>stash</code>，恢复的时候，先用<code>git stash list</code>查看，然后恢复指定的<code>stash</code>，用命令：</p>
+<p><code>$ git stash apply stash@{0}</code></p>
+<h4 id="Feature分支"><a href="#Feature分支" class="headerlink" title="Feature分支"></a>Feature分支</h4><p><code>Git</code>友情提醒，<code>feature-vulcan</code>分支还没有被合并，如果删除，将丢失掉修改，如果要强行删除，需要使用命令<code>git branch -D feature-vulcan</code>。</p>
+<h4 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h4><p>要查看远程库的信息，用<code>git remote</code><br>用<code>git remote -v</code>显示更详细的信息：  </p>
+<h5 id="推送分支"><a href="#推送分支" class="headerlink" title="推送分支"></a>推送分支</h5><p><code>$ git push origin master</code><br>推送其他分支，比如dev： <code>$ git push origin dev</code></p>
+<h5 id="抓取分支"><a href="#抓取分支" class="headerlink" title="抓取分支"></a>抓取分支</h5><p>克隆：<br><code>$ git clone git@github.com:wuwind/learngit.git</code><br>要在dev分支上开发，就必须创建远程origin的dev分支到本地<br><code>$ git checkout -b dev origin/dev</code>  </p>
+<p>本地新建的分支如果不推送到远程，对其他人就是不可见的；</p>
+<p>从本地推送分支，使用<code>git push origin branch-name</code>，如果推送失败，先用<code>git pull</code>抓取远程的新提交；</p>
+<p>在本地创建和远程分支对应的分支，使用<code>git checkout -b branch-name origin/branch-name</code>，本地和远程分支的名称最好一致；</p>
+<p>建立本地分支和远程分支的关联，使用<code>git branch --set-upstream branch-name origin/branch-name</code>；</p>
+<h4 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h4><p>标签也是版本库的一个快照<br>其实它就是指向某个commit的指针（跟分支很像对不对？但是分支可以移动，标签不能移动）</p>
+<h5 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h5><p>命令<code>git tag &lt;name&gt;</code>用于新建一个标签，默认为HEAD，也可以指定一个<code>commit id</code>；<br>找到历史提交的<code>commit id</code>，然后打上就可以了：<br><code>$ git log --pretty=oneline --abbrev-commit</code><br><code>git tag -a &lt;tagname&gt; -m &quot;blablabla...</code>可以指定标签信息；</p>
+<p><code>git tag -s &lt;tagname&gt; -m &quot;blablabla...&quot;</code>以用PGP签名标签；</p>
+<p>命令<code>git tag</code>可以查看所有标签。</p>
+<h5 id="操作标签"><a href="#操作标签" class="headerlink" title="操作标签"></a>操作标签</h5><p>命令<code>git push origin &lt;tagname&gt;</code>可以推送一个本地标签；</p>
+<p>命令<code>git push origin --tags</code>可以推送全部未推送过的本地标签；</p>
+<p>命令<code>git tag -d &lt;tagname&gt;</code>可以删除一个本地标签；</p>
+<p>命令<code>git push origin :refs/tags/&lt;tagname&gt;</code>可以删除一个远程标签。</p>
+<h4 id="使用GitHub"><a href="#使用GitHub" class="headerlink" title="使用GitHub"></a>使用GitHub</h4><p>在GitHub上，可以任意Fork开源仓库；</p>
+<p>自己拥有Fork后的仓库的读写权限；</p>
+<p>可以推送pull request给官方仓库来贡献代码。</p>
+<h4 id="自定义Git"><a href="#自定义Git" class="headerlink" title="自定义Git"></a>自定义Git</h4><p>让Git显示颜色,会让命令输出看起来更醒目：</p>
+<p><code>$ git config --global color.ui true</code></p>
+<h5 id="忽略特殊文件"><a href="#忽略特殊文件" class="headerlink" title="忽略特殊文件"></a>忽略特殊文件</h5><p>创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去。<br><a href="https://github.com/github/gitignore" target="_blank" rel="external">配置文件在线浏览</a>。<br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001375234012342f90be1fc4d81446c967bbdc19e7c03d3000" target="_blank" rel="external">配置别名</a></p>
+<h5 id="搭建Git服务器"><a href="#搭建Git服务器" class="headerlink" title="搭建Git服务器"></a>搭建Git服务器</h5>
         </section>
         <hr/>
         <nav class="pagination" style="width:auto" role="pagination">
             
-            <a style="cursor:default" class="newer-posts" href="#">This is the First Post</a>
+            <a data-pjax class="newer-posts" href="/2016/03/17/MVP-android/">← Prev Post</a>
             
             <a class="share-button" data-original-title title>Share this Post</a>
             
-            <a data-pjax class="older-posts" href="/2016/03/14/Git命令/">Next Post →</a>
+            <a data-pjax class="older-posts" href="/2016/03/14/CaptureScreen_java/">Next Post →</a>
             
         </nav>
         <br/>
