@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Material Design | Wind Blog</title>
+  <title>Android学习资料 | Wind Blog</title>
   <meta name="description" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -152,7 +152,7 @@
                 
                 <div id="nav-container">
                     <div class="post-navbar" style="line-height: 63px;display:none">
-                        <li id="navbar-title"><a href="#">Material Design</a></li>
+                        <li id="navbar-title"><a href="#">Android学习资料</a></li>
                         <li id="navbar-toc" style="border-left: none">
                             <a style="padding-right: 15px">
                                 <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
@@ -181,62 +181,58 @@
                   <div class="tag-tile">
                       
                   </div>
-                <h1 class="post-title" style="margin: 14px 0;color:#50585D">Material Design</h1>
+                <h1 class="post-title" style="margin: 14px 0;color:#50585D">Android学习资料</h1>
 
                     <div class="post-meta">
                         Post on<span class="fa fa-clock-o"></span>
-                        <time datetime="2016-03-25T01:11:02.578Z"
-                              itemprop="datePublished">2016-03-25</time>
+                        <time datetime="2016-03-31T00:32:48.524Z"
+                              itemprop="datePublished">2016-03-31</time>
                     </div>
     </span>
 
         <section class="post-content">
-            <p><a href="http://blog.csdn.net/feiduclear_up/article/details/46439005" target="_blank" rel="external">Android5.x 新控件之RecyclerView，CardView，Palette的使用</a></p>
-<p><a href="http://blog.csdn.net/feiduclear_up/article/details/46514791" target="_blank" rel="external">Android M新控件之AppBarLayout，NavigationView，CoordinatorLayout，CollapsingToolbarLayout的使用</a></p>
-<p><a href="http://blog.csdn.net/feiduclear_up/article/details/46514791" target="_blank" rel="external">Android M新控件之AppBarLayout，NavigationView，CoordinatorLayout，CollapsingToolbarLayout的使用</a></p>
-<p>1、<code>CoordinatorLayout</code>是一个增强型的<code>FrameLayout</code>  </p>
-<blockquote>
-<ul>
-<li>作为一个布局的根布局  </li>
-<li><p>最为一个为子视图之间相互协调手势效果的一个协调布局  </p>
-<h5 id="为了使得Toolbar有滑动效果，必须做到如下三点："><a href="#为了使得Toolbar有滑动效果，必须做到如下三点：" class="headerlink" title="为了使得Toolbar有滑动效果，必须做到如下三点："></a>为了使得Toolbar有滑动效果，必须做到如下三点：</h5></li>
-<li><p><code>CoordinatorLayout</code>必须作为整个布局的父布局容器。</p>
-</li>
-<li><p>需要滑动的组件设置<code>app:layout_scrollFlags=&quot;scroll|enterAlways&quot;</code>属性。    </p>
-<blockquote>
-<ol>
-<li><code>scroll</code>: 所有想滚动出屏幕的<code>view</code>都需要设置这个<code>flag</code>,没有设置固定在屏幕顶部。  </li>
+            <h4 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h4><ol>
+<li>《从零开始的Android新项目3 - MVPVM in Action， 谁告诉你MVP和MVVM是互斥的》：MVVM(Model-View-ViewModel)，在Android上对应data binding。即ViewModel到View的映射，不需要再去自己找到View，然后更新字段，而是在映射建立后直接更新ViewModel然后反映到View上。而MVP解决了activity/fragment过重的问题，通过V/P分离能够帮助提高可维护性。本文作者在自己的新应用中，采用了MVP+MVVM的混合方式，阅读文章，了解这种架构的详细实施方案。  </li>
 </ol>
-<ul>
-<li><code>enterAlways</code>: 这个<code>flag</code>让任意向下的滚动都会导致该<code>view</code>变为可见，启用快速“返回模式”。  </li>
-<li><code>enterAlwaysCollapsed</code>: 当你的视图已经设置<code>minHeight</code>属性又使用此标志时，你的视图只能已最小高度进入，只有当滚动视图到达顶部时才扩大到完整高度。</li>
-<li><code>exitUntilCollapsed</code>: 滚动退出屏幕，最后折叠在顶端。  </li>
-</ul>
-</blockquote>
+<ol>
+<li><a href="http://blog.csdn.net/zhouli_csdn/article/details/50978296" target="_blank" rel="external"> 《Android Bitmap面面观》</a>：在日常开发中，可以说和Bitmap低头不见抬头见，基本上每个应用都会直接或间接的用到，而这里面又涉及到大量的相关知识。本文是对Bitmap常用知识的梳理总结，有助于我们全面的了解Bitmap的一些细节。  </li>
+</ol>
+<ol>
+<li>《ViewAnimator源码分析》：在项目开发中我们应该都接触过动画效果的开发。我们知道在Andorid中实现动画大致分为两类，一种是Tween/Frame动画，另一种是Property Animation也就是属性动画。本文章介绍了属性动画中关于ViewAnimator的相关实现原理。ViewAnimator是用来简化我们写属性动画代码量的，它可以通过非常简洁的代码通过建造者模式调用来组合各种动画，从而让代码简洁易读。本文详细解析了ViewAnimator的源码。</li>
+</ol>
+<ol>
+<li>《Android自定义Lint实践》：Android Lint是Google提供给Android开发者的静态代码检查工具。使用Lint对Android工程代码进行扫描和检查，可以发现代码潜在的问题，提醒程序员及早修正。为保证代码质量，很多开发者都会在开发流程中加入代码检查的功能，如果代码检测到问题，则无法合并到正式分支中，这些检查中就包括Lint。而由于原生Lint无法满足一些特有的需求以及原生Lint存在一些检测缺陷或者缺少一些必要的检测，所以需要自定义Lint。本文是美团关于自定义Lint的实践。 </li>
+</ol>
+<ol>
+<li>《一种为Apk动态写入信息的方案》：为了防止被篡改，Apk发布后都会带有签名。但有些时候我们需要在Apk安装之前写入一些数据，比如多渠道动态打包、安装Apk后需要根据不同的来源跳转到不同的页面等。Android使用的Apk包的压缩方式是zip，与zip 有相同的文件结构，在zip文件的末尾有一个Central Directory Record区域，其末尾包含一个File comment区域，可以存放一些数据，所以File comment是zip文件一部分，本文提供的方案就是动态修改这个部分，实现了在不破坏压缩包、不重新打包的的前提下快速的给Apk文件写入自己想要的数据。 </li>
+</ol>
+<ol>
+<li><p>《携程移动App架构优化之旅》：本文为携程移动开发总监陈浩然在2015年10月份的ArchSummit全球架构师峰会上的演讲总结。由于面向受众为架构师，因此不会涉及到很多技术细节。通过本文，你可以了解携程通过哪些手段来优化它的App架构的。</p>
 </li>
-<li><p>给你的可滑动组件,也就是<code>RecyclerView</code>或者<code>NestedScrollView</code> 设置如下属性：<code>app:layout_behavior=&quot;@string/appbar_scrolling_view_behavior&quot;</code></p>
+<li><p>《RxJava学习总结》：RxJava一个响应式编程框架，采用观察者设计模式，该框架毫无疑问是近两年来最火热的Android开发技术这一，本文是一篇关于RxJava的基础教程，作者总结了自己学习RxJava的一些知识点，有助于RxJava新手快速熟练该技术。  </p>
+<h4 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a>开源项目</h4></li>
+<li><p>nginx-rtmp-module：这是一个本地的RTMP音视频直播demo，有了它，就可以自己学习和使用ffmpeg、libRTMP库，能够在Android下写推流以及拉流播放的代码和应用。</p>
 </li>
-</ul>
-</blockquote>
-<p>2、<code>AppBarLayout</code>是继承<code>LinerLayout</code>实现的一个<code>ViewGroup</code>容器组件  </p>
-<blockquote>
-<ul>
-<li>支持手势滑动操作,默认垂直方向  </li>
-<li>作用是把包裹的内容都作为<code>AppBar</code></li>
-</ul>
-</blockquote>
-<p>3、<code>CollapsingToolbarLayout</code>包裹<code>Toolbar</code>的时候提供一个可折叠的 <code>Toolbar</code>，一般作为<code>AppbarLayout</code>的子视图使用  </p>
-<p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/1118/2006.html" target="_blank" rel="external">ToolBar详解</a></p>
+</ol>
+<ol>
+<li>BoomMenu：BoomMenu是一款带有爆炸效果的菜单按钮，不仅效果很炫，并且提供了多达32种的排列方式。</li>
+</ol>
+<ol>
+<li>RoadRunner：Road Runner是一个通过使用SVG图片，快速生成加载动画的库。</li>
+</ol>
+<ol>
+<li>BlurLockView：这是一款毛玻璃效果的解锁界面，带有密码锁功能。</li>
+</ol>
 
         </section>
         <hr/>
         <nav class="pagination" style="width:auto" role="pagination">
             
-            <a data-pjax class="newer-posts" href="/2016/03/30/android-sendevent-input/">← Prev Post</a>
+            <a style="cursor:default" class="newer-posts" href="#">This is the First Post</a>
             
             <a class="share-button" data-original-title title>Share this Post</a>
             
-            <a data-pjax class="older-posts" href="/2016/03/24/AndroidStudio--gitHub/">Next Post →</a>
+            <a data-pjax class="older-posts" href="/2016/03/30/android-sendevent-input/">Next Post →</a>
             
         </nav>
         <br/>
