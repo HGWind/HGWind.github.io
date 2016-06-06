@@ -289,7 +289,21 @@
 </blockquote>
 <h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p><a href="http://www.jianshu.com/p/b83ea5e32ee1" target="_blank" rel="external">JSon实体类快速生成插件GsonFormat</a></p>
 <p><a href="http://blog.csdn.net/weifei554287925/article/details/41727541" target="_blank" rel="external">Android SelectorChapek工具使用</a></p>
-<h3 id="把自己的Android-library分享到jCenter和Maven-Central"><a href="#把自己的Android-library分享到jCenter和Maven-Central" class="headerlink" title="把自己的Android library分享到jCenter和Maven Central"></a><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0623/3097.html" target="_blank" rel="external">把自己的Android library分享到jCenter和Maven Central</a></h3><p><a href="http://www.jianshu.com/p/0ba8960f80a9" target="_blank" rel="external">将Library上传到Jcenter</a></p>
+<h3 id="把自己的Android-library分享到jCenter和Maven-Central"><a href="#把自己的Android-library分享到jCenter和Maven-Central" class="headerlink" title="把自己的Android library分享到jCenter和Maven Central"></a><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0623/3097.html" target="_blank" rel="external">把自己的Android library分享到jCenter和Maven Central</a></h3><p><a href="http://www.jianshu.com/p/0ba8960f80a9" target="_blank" rel="external">将Library上传到Jcenter</a>  </p>
+<hr>
+<h3 id="AndroidStudio导出Jar包"><a href="#AndroidStudio导出Jar包" class="headerlink" title="AndroidStudio导出Jar包"></a>AndroidStudio导出Jar包</h3><p><a href="http://www.jianshu.com/p/5db27dcd988a" target="_blank" rel="external">AndroidStudio导出Jar包</a></p>
+<pre><code>task clearJar(type: Delete) {
+    delete &apos;build/libs/yutils.jar&apos;
+}
+
+task makeJar(type: Copy) {
+    from(&apos;build/intermediates/bundles/release/&apos;)
+    into(&apos;build/libs/&apos;)
+    include(&apos;classes.jar&apos;)
+    rename (&apos;classes.jar&apos;, &apos;yutils.jar&apos;)
+}
+</code></pre><p>执行命令:  </p>
+<p>./gradlew makeJar</p>
 
         </section>
         <hr/>
