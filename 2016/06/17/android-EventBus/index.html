@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Archives | Wind Blog</title>
+  <title>Eventbus | Wind Blog</title>
   <meta name="description" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -242,7 +242,7 @@
                 
                 <div id="nav-container">
                     <div class="post-navbar" style="line-height: 63px;display:none">
-                        <li id="navbar-title"><a href="#">undefined</a></li>
+                        <li id="navbar-title"><a href="#">Eventbus</a></li>
                         <li id="navbar-toc" style="border-left: none">
                             <a style="padding-right: 15px">
                                 <span id="toc-content" >Introduction</span><i class="fa fa-chevron-down" ></i>
@@ -261,326 +261,53 @@
 
 
 <!-- -->
-<!--<body class="home-template">-->
+<!--<body class="post-template">-->
 <!---->
   
+
 <main class="content" role="main">
+    <article class="post" >
+    <span class="post-meta">
+                  <div class="tag-tile">
+                      
+                  </div>
+                <h1 class="post-title" style="margin: 14px 0;color:#50585D">Eventbus</h1>
 
-    
-    <article class="post">
+                    <div class="post-meta">
+                        Post on<span class="fa fa-clock-o"></span>
+                        <time datetime="2016-06-17T06:50:17.092Z"
+                              itemprop="datePublished">2016-06-17</time>
+                    </div>
+    </span>
 
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/06/17/android-EventBus/">Eventbus</a>
-            </h1>
+        <section class="post-content">
+            <p>在一个单例内部维持着一个map对象存储了一堆的方法(register会把当前类中匹配的方法，存入一个map)；post根据参数去map查找方法，进行反射调用。</p>
+<p>当通过<code>postSticky</code>发送一个事件时，这个类型的事件的最后一次事件会被缓存起来，当有订阅者通过<code>registerSticky</code>注册时，会把之前缓存起来的这个事件直接发送给它。</p>
+<p><a href="http://blog.csdn.net/lmj623565791/article/details/40794879" target="_blank" rel="external">Android EventBus实战</a></p>
+<p><a href="http://blog.csdn.net/lmj623565791/article/details/40920453" target="_blank" rel="external">Android EventBus源码解析</a></p>
+<p><a href="http://www.cnblogs.com/angeldevil/p/3715934.html" target="_blank" rel="external">快速Android开发系列通信篇之EventBus</a></p>
+<p><a href="http://blog.csdn.net/lufeng20/article/details/24314381" target="_blank" rel="external">彻底理解ThreadLocal</a></p>
+<p><a href="http://www.cnphp6.com/archives/61093" target="_blank" rel="external">EXECUTORSERVICE线程池讲解</a></p>
 
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-06-17T06:50:17.092Z"
-                      itemprop="datePublished">2016-06-17</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                在一个单例内部维持着一个map对象存储了一堆的方法(register会把当前类中匹配的方法，存入一个map)；post根据参数去map查找方法，进行反射调用。
-当通过postSticky发送一个事件时，这个类型的事件的最后一次事件会被缓存起来，当有订阅者通过registerSticky注册时，会把之前缓存起来的这个事件直接发送给它。
-Android EventBus实战
-Android EventBus源码解析
-快速Android开发系
-                
-            </p>
-            
         </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/06/13/android-download/">下载 android</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-06-13T07:30:09.104Z"
-                      itemprop="datePublished">2016-06-13</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                android多线程断点下载
-Andorid多线程断点续传下载器 
-Android 多线程下载 仿下载助手 
-Android文件下载（实现断点续传）
-DownloadManager
-用Java发起HTTP请求与获取状态码(含状态码列表)
-什么是mime类型  
-在把输出结果传送到浏览器上的时候，浏览器必须启动是党的应用程序来处理这个输出文档。这可以通过多种类型MIME（多功能网际邮件扩充协议）来完成。在HTTP中，MIME类型被定义在C
-                
-            </p>
+        <hr/>
+        <nav class="pagination" style="width:auto" role="pagination">
             
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/06/13/document/">目录</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-06-13T07:25:14.613Z"
-                      itemprop="datePublished">2016-06-13</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                android-permission  6.0权限
-android-studio   androidStudio
-android-animation  动画
-android-package  多渠道打包
-android-gradle-config  gradle配置
-android-video  视频
-android-component  组件
-
-                
-            </p>
+            <a style="cursor:default" class="newer-posts" href="#">This is the First Post</a>
             
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/06/07/android-gradle-config/">grale 配置</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-06-07T07:24:55.900Z"
-                      itemprop="datePublished">2016-06-07</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                使用Gradle管理Debug/Release版本的Key
-Gradle 多渠道打包实践
-Gradle的大型项目常用库和版本管理
-
-                
-            </p>
+            <a class="share-button" data-original-title title>Share this Post</a>
             
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/06/01/android-animation/">android动画</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-06-01T07:54:23.042Z"
-                      itemprop="datePublished">2016-06-01</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                Animation动画详解(七)——ObjectAnimator基本使用
-Android 属性动画（Property Animation） 完全解析 （上）
-Android 2D Graphics学习（二）、Canvas篇2、Canvas裁剪和Region、RegionIterator 
-Android实现书籍翻页效果–扩展版
-Android闪闪发光字体效果
-1234567anim/tutorail_bottom.xmltutorail
-                
-            </p>
+            <a data-pjax class="older-posts" href="/2016/06/13/android-download/">Next Post →</a>
             
+        </nav>
+        <br/>
+        <br/>
+        <section id="comment">
+            <div id="comment-box"></div>
         </section>
+
+
     </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/05/30/android-permission/">android permission</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-05-30T07:19:07.748Z"
-                      itemprop="datePublished">2016-05-30</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                Android 6.0 运行时权限处理
- Android 6.0 运行时权限处理完全解析
-Android 6.0运行时权限
-运行时权限身体传感器日历摄像头通讯录地理位置麦克风电话短信存储空间  
-‘ if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)              != PackageManager.P
-                
-            </p>
-            
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/05/25/android-package/">打包</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-05-25T09:20:48.928Z"
-                      itemprop="datePublished">2016-05-25</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                Android几种常见的多渠道(批量)打包方式介绍
-安卓多渠道打包工具
-Android批量打包提速
-美团Android自动化之旅—适配渠道包
-
-                
-            </p>
-            
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/05/04/android-image-loader/">图片框架</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-05-04T03:42:42.275Z"
-                      itemprop="datePublished">2016-05-04</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                Universal-Image-Loader，android-Volley，Picasso、Fresco和Glide五大Android开源组件加载网络图片比较
- Android图片加载神器之Fresco-加载图片基础[详细图解Fresco的使用]
- Android图片加载神器之Fresco
-Android 平滑图片加载和缓存库 Glide 使用详解
-Glide使用详解（一）
-图片加载框架Glide解析
-
-                
-            </p>
-            
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/05/03/web-hexo/"></a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-05-03T00:49:47.087Z"
-                      itemprop="datePublished">2016-05-03</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                HEXO+Github,搭建属于自己的博客
-hexo你的博客
-Hexo 主题 Kael 的介绍与定制
-
-                
-            </p>
-            
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/04/20/android-video/">视频框架</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-04-20T09:06:03.662Z"
-                      itemprop="datePublished">2016-04-20</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                开源的Android视频播放器
-视频框架Vitamio学习
-使用Vitamio打造自己的Android万能播放器
-Vitamio中文API文档
-
-                
-            </p>
-            
-        </section>
-    </article>
-    
-    <nav class="pagination" role="pagination">
-        
-        <span class="page-number">Page 1 of 3</span>
-        
-        <a data-pjax class="older-posts" href="/archives/page/2/">Older Posts →</a>
-        
-    </nav>
 </main>
 
 

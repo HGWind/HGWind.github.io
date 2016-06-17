@@ -43,6 +43,10 @@
                                 <div class="mp-scroll">
                                 
                                 <li class="search-archive-li mp-pjax">
+                                    <a href="/2016/06/17/android-EventBus/">Eventbus</a>
+                                </li>
+                                
+                                <li class="search-archive-li mp-pjax">
                                     <a href="/2016/06/13/android-download/">下载 android</a>
                                 </li>
                                 
@@ -180,6 +184,8 @@
         <div id="pjax">
             <div class="pjax-hidden" style="display: none">
                 
+                    <a  data-pjax href="/2016/06/17/android-EventBus/">Eventbus</a>
+                
                     <a  data-pjax href="/2016/06/13/android-download/">下载 android</a>
                 
                     <a  data-pjax href="/2016/06/13/document/">目录</a>
@@ -268,6 +274,36 @@
                 
                 <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
             </div>
+            <h1 class="post-title"><a data-pjax href="/2016/06/17/android-EventBus/">Eventbus</a>
+            </h1>
+
+            <div class="post-meta">
+                Post on<span class="fa fa-clock-o"></span>
+                <time datetime="2016-06-17T06:50:17.092Z"
+                      itemprop="datePublished">2016-06-17</time>
+            </div>
+        </header>
+        <section class="post-excerpt">
+            <p>
+                
+                在一个单例内部维持着一个map对象存储了一堆的方法(register会把当前类中匹配的方法，存入一个map)；post根据参数去map查找方法，进行反射调用。
+当通过postSticky发送一个事件时，这个类型的事件的最后一次事件会被缓存起来，当有订阅者通过registerSticky注册时，会把之前缓存起来的这个事件直接发送给它。
+Android EventBus实战
+Android EventBus源码解析
+快速Android开发系
+                
+            </p>
+            
+        </section>
+    </article>
+    
+    <article class="post">
+
+        <header class="post-header">
+            <div class="tag-tile">
+                
+                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
+            </div>
             <h1 class="post-title"><a data-pjax href="/2016/06/13/android-download/">下载 android</a>
             </h1>
 
@@ -286,7 +322,8 @@ Android 多线程下载 仿下载助手
 Android文件下载（实现断点续传）
 DownloadManager
 用Java发起HTTP请求与获取状态码(含状态码列表)
-
+什么是mime类型  
+在把输出结果传送到浏览器上的时候，浏览器必须启动是党的应用程序来处理这个输出文档。这可以通过多种类型MIME（多功能网际邮件扩充协议）来完成。在HTTP中，MIME类型被定义在C
                 
             </p>
             
