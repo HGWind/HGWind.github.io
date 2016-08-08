@@ -43,6 +43,14 @@
                                 <div class="mp-scroll">
                                 
                                 <li class="search-archive-li mp-pjax">
+                                    <a href="/2016/08/04/android-annotation-builder/">androidstudio 手写编译时注解框架</a>
+                                </li>
+                                
+                                <li class="search-archive-li mp-pjax">
+                                    <a href="/2016/08/03/android-form/"></a>
+                                </li>
+                                
+                                <li class="search-archive-li mp-pjax">
                                     <a href="/2016/07/21/android-Zxing/">Zxing</a>
                                 </li>
                                 
@@ -196,6 +204,10 @@
         <div id="pjax">
             <div class="pjax-hidden" style="display: none">
                 
+                    <a  data-pjax href="/2016/08/04/android-annotation-builder/">androidstudio 手写编译时注解框架</a>
+                
+                    <a  data-pjax href="/2016/08/03/android-form/"></a>
+                
                     <a  data-pjax href="/2016/07/21/android-Zxing/">Zxing</a>
                 
                     <a  data-pjax href="/2016/06/28/android-dagger/">Dagger</a>
@@ -284,6 +296,71 @@
   
 <main class="content" role="main">
 
+    
+    <article class="post">
+
+        <header class="post-header">
+            <div class="tag-tile">
+                
+                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
+            </div>
+            <h1 class="post-title"><a data-pjax href="/2016/08/04/android-annotation-builder/">androidstudio 手写编译时注解框架</a>
+            </h1>
+
+            <div class="post-meta">
+                Post on<span class="fa fa-clock-o"></span>
+                <time datetime="2016-08-04T07:30:54.872Z"
+                      itemprop="datePublished">2016-08-04</time>
+            </div>
+        </header>
+        <section class="post-excerpt">
+            <p>
+                
+                一、概述二、环境搭建三、核心提供一个注解和一个处理器
+3.1注解元注解就是注解的注解
+1.@Target：用于描述注解的使用范围
+/接口、类、枚举、注解/ElementType.TYPE          
+2.@Retention：表示注解类型保留的时长，它接收RetentonPolicy参数
+/注解仅存在于源码中，在编译阶段丢弃。这些注解在编译结束之后就不再有任何意义，所以它们不会写入字节码。/RetentionPolicy.SOU
+                
+            </p>
+            
+        </section>
+    </article>
+    
+    <article class="post">
+
+        <header class="post-header">
+            <div class="tag-tile">
+                
+                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
+            </div>
+            <h1 class="post-title"><a data-pjax href="/2016/08/03/android-form/"></a>
+            </h1>
+
+            <div class="post-meta">
+                Post on<span class="fa fa-clock-o"></span>
+                <time datetime="2016-08-03T03:36:21.558Z"
+                      itemprop="datePublished">2016-08-03</time>
+            </div>
+        </header>
+        <section class="post-excerpt">
+            <p>
+                
+                
+title:android自定义表单一、概述 
+场景：如上图，注册时，需要获取填入的内容，并且判断是否为空，如果为空则提示。  
+如果你有耐心，可以一个个获取editText，然后逐个获取值，逐个用if else判断是否为空。  
+下面就是为解决这一个繁琐的问题提供方案。  
+二、使用效果图
+1、引入库 compile ‘com.wuwind.form:formlibrary:1.0.0’  
+2、在你的布局文件最外层嵌套  
+&lt
+                
+            </p>
+            
+        </section>
+    </article>
     
     <article class="post">
 
@@ -524,66 +601,6 @@ Android 2D Graphics学习（二）、Canvas篇2、Canvas裁剪和Region、Region
 Android实现书籍翻页效果–扩展版
 Android闪闪发光字体效果
 1234567anim/tutorail_bottom.xmltutorail
-                
-            </p>
-            
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/05/30/android-permission/">android permission</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-05-30T07:19:07.748Z"
-                      itemprop="datePublished">2016-05-30</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                Android 6.0 运行时权限处理
- Android 6.0 运行时权限处理完全解析
-Android 6.0运行时权限
-运行时权限身体传感器日历摄像头通讯录地理位置麦克风电话短信存储空间  
-‘ if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)              != PackageManager.P
-                
-            </p>
-            
-        </section>
-    </article>
-    
-    <article class="post">
-
-        <header class="post-header">
-            <div class="tag-tile">
-                
-                <span class="fa fa-bookmark" style="float:right;color:#f39c12"></span>
-            </div>
-            <h1 class="post-title"><a data-pjax href="/2016/05/25/android-package/">打包</a>
-            </h1>
-
-            <div class="post-meta">
-                Post on<span class="fa fa-clock-o"></span>
-                <time datetime="2016-05-25T09:20:48.928Z"
-                      itemprop="datePublished">2016-05-25</time>
-            </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                Android几种常见的多渠道(批量)打包方式介绍
-安卓多渠道打包工具
-Android批量打包提速
-美团Android自动化之旅—适配渠道包
-
                 
             </p>
             
